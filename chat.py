@@ -23,7 +23,7 @@ llm = AutoModelForCausalLM.from_pretrained('zoltanctoth/orca_mini_3B-GGUF', mode
 # for word in llm(get_prompt(questions), stream=True):
 # 	print(word, end="", flush=True)
 # ------------------------------------------------
-# prompt = "the name of the capital of india is"
+prompt = "the name of the capital of india is"
 def get_prompt(instruction: str, history: List[str] = None) -> str:
 	system = "You are an AI assistant that gives helpful answers. You answer in a concise and clear manner. If you don't know the answer, just say that you don't know. Do not try to make up an answer."
 	prompt = f"### System:\n{system}\n\n### User:\n"
